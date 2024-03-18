@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+
 class VolModel:
     def __init__(self):
         self.window = 30
@@ -13,14 +14,14 @@ class VolModel:
         :return:
         """
 
-    def parkinson(self, data):
+    def parkinson(self, data: pd.DataFrame):
         """
         Calculates the parkinson volatility estimator.
         :return:
         """
         const = 4 * np.log(2)
 
-        rs = (np.log(data["high"] / data["low"]) ** 2.0).rolling(window=self.window)
+        rs = (np.log(data["High"] / data["Low"]) ** 2.0).rolling(window=self.window)
 
         result = (rs / (const * self.trading_periods)) ** 0.5
 
