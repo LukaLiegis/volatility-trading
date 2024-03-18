@@ -22,7 +22,7 @@ class VolModel:
         """
         const = 4 * np.log(2)
 
-        rs = (np.log(data["High"] / data["Low"]) ** 2.0).rolling(window=self.window)
+        rs = (np.log(data["High"] / data["Low"]) ** 2.0).rolling(window=self.window).sum()
 
         result = (rs / (const * self.trading_periods)) ** 0.5
 
