@@ -7,7 +7,7 @@ class VolModel:
         self.window = 30
         self.trading_periods = 252
         self.clean = True
-        print("Initializing VolModel...")
+        print("Initializing VolModel")
 
     def close_to_close(self):
         """

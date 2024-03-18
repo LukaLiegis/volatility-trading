@@ -1,1 +1,3 @@
 # volatility-trading
+
+## Calculating Volatility
